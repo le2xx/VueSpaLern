@@ -9,11 +9,13 @@ import Example4 from './examples/Example-4.vue'
 import Example5 from './examples/Example-5.vue'
 import Example6 from './examples/Example-6.vue'
 import Example7 from './examples/Example-7.vue'
+import Example8 from './examples/Example-8.vue'
 
 Vue.component('todo-item', {
   props: ['todo'],
   template: '<li>{{ todo.text }}</li>'
 })
+
 
 Vue.use(VueRouter)
 
@@ -59,6 +61,11 @@ const router = new VueRouter({
       name:'example7',
       component: Example7,
     },
+    {
+      path:'/8',
+      name:'example8',
+      component: Example8,
+    }
   ]
 });
 

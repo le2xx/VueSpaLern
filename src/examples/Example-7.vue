@@ -12,9 +12,7 @@
 </template>
 
 <script>
-
 export default {
-  components: { todo-item },
   data () {
     return {
       fresh: [

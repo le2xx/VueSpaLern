@@ -5,15 +5,16 @@
     </header>
     <div class="sidebar">
       <div class="menu">
-      <div class="menu menu__item" v-for="item in menu"
-        :key="item.example">
+      <router-link v-for="item in menu"
+        :key="item.example"
+        :to="{ name: `example${item.example}` }">
         <div class="menu menu__item menu__item_num">{{ item.example }}</div>
         <div class="menu menu__item menu__item_text">{{ item.text }}</div>
-      </div>
+      </router-link>
       </div>
     </div>
     <div class="content">
-      <p>content</p>
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -25,12 +26,12 @@ export default {
     return {
       msg: 'Учимся Vue а за одно и css с js',
       menu: [
-        { example: 1, text: 'Hello World!'},
-        { example: 2, text: 'Динамически связанные свойства'},
-        { example: 3, text: 'Условия v-if'},
-        { example: 4, text: 'Циклы v-for'},
-        { example: 5, text: 'События v-on'},
-        { example: 6, text: 'Cвязывание элементов форм v-model'}
+        { example: 1, text: 'Hello World!' },
+        { example: 2, text: 'Динамически связанные свойства' },
+        { example: 3, text: 'Условия v-if' },
+        { example: 4, text: 'Циклы v-for' },
+        { example: 5, text: 'События v-on' },
+        { example: 6, text: 'Cвязывание элементов форм v-model' }
       ]
     }
   }
@@ -57,7 +58,7 @@ body {
   min-height: 90px;
 }
 
-.header_h2 {
+.h2 {
   color: darkgreen;
   text-align: left
 }
@@ -103,6 +104,7 @@ body {
 }
 
 .content {
+  
   position: fixed;
   top: 90px;
   left: 21%;
@@ -111,7 +113,8 @@ body {
 }
 
 .example {
-  font-family: "Comic Sans MS", "Comic Sans", cursive
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+ 
 }
 
 .btn {

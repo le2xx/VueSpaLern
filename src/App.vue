@@ -7,6 +7,7 @@
       <div class="menu">
       <router-link v-for="item in menu"
         :key="item.example"
+        class="menu__a"
         :to="{ name: `example${item.example}` }">
         <div class="menu menu__item menu__item_num">{{ item.example }}</div>
         <div class="menu menu__item menu__item_text">{{ item.text }}</div>
@@ -31,7 +32,9 @@ export default {
         { example: 3, text: 'Условия v-if' },
         { example: 4, text: 'Циклы v-for' },
         { example: 5, text: 'События v-on' },
-        { example: 6, text: 'Cвязывание элементов форм v-model' }
+        { example: 6, text: 'Cвязывание элементов форм v-model' },
+        { example: 7, text: 'Компоненты' },
+        { example: 8, text: 'CRUD' }
       ]
     }
   }
@@ -77,6 +80,10 @@ body {
 
 .menu {
   color: green;
+}
+
+.menu__a {
+  text-decoration: none
 }
 
 .menu__item {

@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
-    <header class="header">
+  <div class="app" id="app">
+    <div class="header">
       <h1>{{ msg }}</h1>
-    </header>
+    </div>
     <div class="sidebar">
       <div class="menu">
       <router-link v-for="item in menu"
@@ -42,54 +42,59 @@ export default {
 </script>
 
 <style>
-body {
+body, html {
   background-color: #deecde;
-  margin: 0 0 0 0;
+  margin: 0;
+  padding: 0 0;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.app {
+  width: calc(100% - 20px);
+  margin: 10px;
+  border: 2px solid #8c9995;
+  border-style: dashed;
+  position: absolute;
 }
 
 .header {
   border-bottom: 2px solid #8c9995;
   border-bottom-style: dashed;
-  color: green;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
   text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 90px;
+  color: #42b954;
 }
 
 .h2 {
   color: darkgreen;
-  text-align: left
+  text-align: left;
+  margin: 0 0 10px 0;
 }
 
 .sidebar {
   width: 20%;
-  padding: 10px 0;
-  box-sizing: border-box;
+  min-width: 200px;
+  float: left;
   border-right: 2px solid #8c9995;
   border-right-style: dashed;
-  position: relative;
-  min-height: 100%;
-  top: 90px;
-  margin: 0px 0px 0px 10px
+}
+
+.content {
+  margin-left: calc(20% + 10px);
+  margin-top: 0;
 }
 
 .menu {
   color: green;
+  margin: 0;
+  padding: 5px;
 }
 
 .menu__a {
-  text-decoration: none
+  text-decoration: none;
 }
 
 .menu__item {
   float: none;
-  margin:  5px 0 5px 0;
-  
 }
 
 .menu__item_num {
@@ -105,23 +110,12 @@ body {
 }
 
 .menu__item_text {
-  width: 340px;
-  position: relative;
-  line-height: 50px;
-}
-
-.content {
-  
-  position: fixed;
-  top: 90px;
-  left: 21%;
-  width: 79%;
-  padding: 10px 5px
+  margin-left: 50px;
+  line-height: 45px;
 }
 
 .example {
   font-family: "Comic Sans MS", "Comic Sans", cursive;
- 
 }
 
 .btn {
@@ -132,12 +126,12 @@ body {
   color: white;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   margin: 5px;
-  padding: 10px 5px
+  padding: 10px 5px;
 }
 
 .btn_remov {
   background-color: #a42f2f;
-  padding: 2px 5px
+  padding: 2px 5px;
 }
 
 .input {
@@ -148,7 +142,7 @@ body {
   color: white;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   margin: 5px;
-  padding: 10px 5px
+  padding: 10px 5px;
 }
 
 .input::-webkit-input-placeholder {
@@ -159,24 +153,24 @@ body {
   border: 1px solid black;
   border-collapse: collapse;
   counter-reset: schetchik;
-  padding: 0 10px
+  padding: 0 10px;
 }
 
 .table__col {
   border: 1px solid black;
-  padding: 0 10px
+  padding: 0 10px;
 }
 
 .table__col_head {
-  font-weight: 600
+  font-weight: 600px;
 }
 
 .table .num {
-  counter-increment: schetchik
+  counter-increment: schetchik;
 }
 
 .table .num:before {
-  content: counter(schetchik)
+  content: counter(schetchik);
 }
 
 .select {
@@ -187,6 +181,6 @@ body {
   color: white;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   margin: 5px;
-  padding: 10px 5px
+  padding: 10px 5px;
 }
 </style>

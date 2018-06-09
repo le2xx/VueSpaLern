@@ -54,6 +54,7 @@ body, html {
   margin: 10px;
   border: 2px solid #8c9995;
   border-style: dashed;
+  border-radius: 15px;
   position: absolute;
 }
 
@@ -76,6 +77,10 @@ body, html {
   float: left;
   border-right: 2px solid #8c9995;
   border-right-style: dashed;
+}
+
+.success {
+  background: #a42f2f
 }
 
 .content {
@@ -107,6 +112,11 @@ body, html {
   color: #a42f2f;
   border-radius: 50%;
   float: left;
+}
+
+.menu__item:hover:first-child {
+  background: #363b37;
+  color: rgb(211, 227, 230);
 }
 
 .menu__item_text {

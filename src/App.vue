@@ -34,7 +34,8 @@ export default {
         { example: 5, text: 'События v-on' },
         { example: 6, text: 'Cвязывание элементов форм v-model' },
         { example: 7, text: 'Компоненты' },
-        { example: 8, text: 'CRUD' }
+        { example: 8, text: 'CRUD' },
+        { example: 9, text: 'Работа с API' },
       ]
     }
   }

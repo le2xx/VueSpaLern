@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Delay from 'vue-delay'
 import App from './App.vue'
 import Home from './examples/Home.vue'
 import Example1 from './examples/Example-1.vue'
@@ -10,13 +11,14 @@ import Example5 from './examples/Example-5.vue'
 import Example6 from './examples/Example-6.vue'
 import Example7 from './examples/Example-7.vue'
 import Example8 from './examples/Example-8.vue'
+import Example9 from './examples/Example-9.vue'
 
 Vue.component('todo-item', {
   props: ['todo'],
   template: '<li>{{ todo.text }}</li>'
 })
 
-
+Vue.use(Delay)
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -65,6 +67,11 @@ const router = new VueRouter({
       path:'/8',
       name:'example8',
       component: Example8,
+    },
+    {
+      path:'/9',
+      name:'example9',
+      component: Example9,
     }
   ]
 });

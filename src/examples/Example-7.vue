@@ -12,7 +12,12 @@
 </template>
 
 <script>
+import Todoitem from '../components/Todoitem.vue'
+
 export default {
+  components: {
+    'todo-item': Todoitem
+  },
   data () {
     return {
       fresh: [

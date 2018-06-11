@@ -13,11 +13,6 @@ import Example7 from './examples/Example-7.vue'
 import Example8 from './examples/Example-8.vue'
 import Example9 from './examples/Example-9.vue'
 
-Vue.component('todo-item', {
-  props: ['todo'],
-  template: '<li>{{ todo.text }}</li>'
-})
-
 Vue.use(Delay)
 Vue.use(VueRouter)
 

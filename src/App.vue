@@ -35,7 +35,7 @@ export default {
         { example: 6, text: 'Cвязывание элементов форм v-model' },
         { example: 7, text: 'Компоненты' },
         { example: 8, text: 'CRUD' },
-        { example: 9, text: 'Работа с API' },
+        { example: 9, text: 'Часы' },
       ]
     }
   }
@@ -142,7 +142,12 @@ body, html {
 
 .btn_remov {
   background-color: #a42f2f;
-  padding: 2px 5px;
+  padding: 1px 5px;
+}
+.btn_table {
+  padding: 0;
+  margin: 3px;
+  width: 70px;
 }
 
 .input {
@@ -173,7 +178,7 @@ body, html {
 }
 
 .table__col_head {
-  font-weight: 600px;
+  font-weight: bold;
 }
 
 .table .num {

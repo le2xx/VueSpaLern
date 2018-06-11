@@ -3,7 +3,7 @@
     <link rel="stylesheet" media="screen" 
     href="https://fontlibrary.org/face/segment7" type="text/css"/>
     <delay :wait="3000">
-      <h2 class="h2">Урок 9. Работа с API</h2>
+      <h2 class="h2">Урок 9. Часы</h2>
     </delay>
     <delay :wait="5000">
       <p>Только что сработал vue-delay в заголовке</p>
